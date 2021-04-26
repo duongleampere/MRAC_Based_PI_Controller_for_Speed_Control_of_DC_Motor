@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp.sp
+"robot\startup_stm32f407xx.o"
+"robot\main.o"
+"robot\stm32f4xx_it.o"
+"robot\stm32f4xx_hal_msp.o"
+"robot\stm32f4xx_hal_tim.o"
+"robot\stm32f4xx_hal_tim_ex.o"
+"robot\stm32f4xx_hal_rcc.o"
+"robot\stm32f4xx_hal_rcc_ex.o"
+"robot\stm32f4xx_hal_flash.o"
+"robot\stm32f4xx_hal_flash_ex.o"
+"robot\stm32f4xx_hal_flash_ramfunc.o"
+"robot\stm32f4xx_hal_gpio.o"
+"robot\stm32f4xx_hal_dma_ex.o"
+"robot\stm32f4xx_hal_dma.o"
+"robot\stm32f4xx_hal_pwr.o"
+"robot\stm32f4xx_hal_pwr_ex.o"
+"robot\stm32f4xx_hal_cortex.o"
+"robot\stm32f4xx_hal.o"
+"robot\stm32f4xx_hal_exti.o"
+"robot\stm32f4xx_hal_uart.o"
+"robot\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "robot\robot.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "robot.map" -o robot\robot.axf
